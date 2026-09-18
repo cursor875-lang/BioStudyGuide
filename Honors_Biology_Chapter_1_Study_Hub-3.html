@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Honors Biology — Chapter 1 Study Hub</title>
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--text:#172033;--muted:#667085;--accent:#315efb;--accent2:#e9efff;--good:#138a4b;--bad:#c62828;--border:#e2e6ef}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--text)}
+header{background:linear-gradient(135deg,#172554,#315efb);color:white;padding:34px 20px}
+.wrap{max-width:1050px;margin:auto}.eyebrow{font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;opacity:.8}
+h1{font-size:38px;margin:7px 0}.sub{opacity:.9;max-width:720px}
+nav{position:sticky;top:0;background:white;border-bottom:1px solid var(--border);z-index:5;overflow:auto}
+.tabs{display:flex;gap:7px;padding:10px 0}.tabs button{border:0;background:transparent;padding:10px 14px;border-radius:9px;cursor:pointer;font-weight:700;color:var(--muted);white-space:nowrap}.tabs button.active{background:var(--accent2);color:var(--accent)}
+main{padding:25px 20px 50px}.section{display:none}.section.active{display:block}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:19px;box-shadow:0 3px 12px #17255408}
+.card h3{margin:0 0 8px}.card p{line-height:1.55;color:#3e4759}.tag{display:inline-block;background:var(--accent2);color:var(--accent);font-size:12px;font-weight:800;padding:4px 8px;border-radius:999px;margin-bottom:9px}
+.callout{border-left:4px solid var(--accent);background:#eef3ff;padding:15px 17px;border-radius:8px;margin:15px 0;line-height:1.55}
+.flow{font-weight:800;background:#fafbff;border:1px solid var(--border);padding:15px;border-radius:12px;text-align:center;line-height:2}
+.question{font-size:19px;font-weight:800;line-height:1.4}.answers{display:grid;gap:9px;margin-top:15px}.answers button{padding:13px;text-align:left;border:1px solid var(--border);background:white;border-radius:10px;cursor:pointer;font-size:15px}.answers button:hover{border-color:var(--accent);background:#f7f9ff}
+.feedback{margin-top:13px;padding:13px;border-radius:10px;display:none}.correct{background:#eaf8f0;color:var(--good)}.wrong{background:#fff0f0;color:var(--bad)}
+.controls{display:flex;gap:10px;flex-wrap:wrap;margin-top:17px}button.primary{background:var(--accent);color:#fff;border:0;border-radius:10px;padding:11px 17px;font-weight:800;cursor:pointer}button.secondary{background:white;border:1px solid var(--border);border-radius:10px;padding:11px 17px;font-weight:700;cursor:pointer}
+.score{font-size:24px;font-weight:900}.progress{height:9px;background:#e7eaf1;border-radius:20px;overflow:hidden}.bar{height:100%;background:var(--accent);width:0;transition:.25s}
+ul{line-height:1.7}.mini{font-size:13px;color:var(--muted)}
+table{width:100%;border-collapse:collapse}.tablewrap{overflow:auto}th,td{border-bottom:1px solid var(--border);padding:11px;text-align:left;vertical-align:top}th{background:#f7f8fb}
+footer{text-align:center;color:var(--muted);padding:25px}
+@media(max-width:600px){h1{font-size:30px}}
+
+/* ===== UPGRADED STUDY HUB ===== */
+body{background:radial-gradient(circle at 10% 0%,#eaf0ff 0,transparent 30%),radial-gradient(circle at 90% 10%,#e9fff5 0,transparent 25%),#f6f8fc}
+header{background:linear-gradient(135deg,#101b45 0%,#315efb 58%,#6d5dfc 100%);padding:42px 20px 50px;position:relative;overflow:hidden}
+header:after{content:"";position:absolute;width:360px;height:360px;border-radius:50%;right:-100px;top:-180px;background:#ffffff18}
+h1{font-size:46px;letter-spacing:-1.5px}.sub{font-size:16px}
+.tabs{gap:8px}.tabs button{transition:.18s}.tabs button:hover{transform:translateY(-1px);color:var(--accent)}
+.section.active{animation:fade .25s ease}@keyframes fade{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+.card{box-shadow:0 8px 25px #1725540a;transition:.2s}.card:hover{box-shadow:0 12px 32px #17255412;transform:translateY(-1px)}
+.hero{display:grid;grid-template-columns:1.35fr .65fr;gap:16px;align-items:stretch}.hero .card{min-height:210px}
+.statbox{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:17px}.stat{background:#f7f8ff;border:1px solid var(--border);border-radius:12px;padding:12px;text-align:center}.stat b{font-size:21px;display:block}
+.modebar{display:flex;gap:8px;flex-wrap:wrap;margin:15px 0}.modebar button{border:1px solid var(--border);background:#fff;border-radius:999px;padding:9px 13px;font-weight:750;cursor:pointer}.modebar button.sel{background:#172554;color:#fff;border-color:#172554}
+.flash-wrap{display:flex;justify-content:center;padding:8px 0}.flashcard{width:min(700px,100%);min-height:340px;perspective:1000px;cursor:pointer}.flash-inner{position:relative;width:100%;height:340px;transition:transform .6s;transform-style:preserve-3d}.flashcard.flipped .flash-inner{transform:rotateY(180deg)}.flash-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:24px;padding:38px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;border:1px solid var(--border);box-shadow:0 20px 45px #17255414}.flash-front{background:linear-gradient(145deg,#fff,#f0f4ff)}.flash-back{background:linear-gradient(145deg,#101b45,#315efb);color:white;transform:rotateY(180deg)}.flash-label{font-size:12px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;opacity:.65}.flash-term{font-size:34px;font-weight:950;margin:16px 0}.flash-answer{font-size:20px;line-height:1.5}.flash-hint{font-size:13px;color:var(--muted);margin-top:14px}
+.gamegrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}.gamecard{padding:21px;border-radius:18px;background:#fff;border:1px solid var(--border);cursor:pointer;transition:.2s}.gamecard:hover{transform:translateY(-3px);box-shadow:0 12px 30px #17255415}.gameicon{font-size:34px}.gamecard h3{margin:10px 0 5px}
+.pillscore{display:inline-flex;align-items:center;gap:8px;background:#101b45;color:#fff;padding:8px 12px;border-radius:999px;font-weight:800}
+.meter{height:10px;background:#e7eaf1;border-radius:99px;overflow:hidden}.meter span{display:block;height:100%;width:0;background:linear-gradient(90deg,#315efb,#6d5dfc);transition:.35s}
+.locked{opacity:.55;pointer-events:none}
+@media(max-width:700px){h1{font-size:34px}.hero{grid-template-columns:1fr}.flash-inner,.flashcard{min-height:300px;height:300px}.statbox{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<div class="eyebrow">Honors Biology • Chapter 1</div>
+<h1>Biology: Exploring Life</h1>
+<div class="sub">An application-focused study hub. Learn the idea, try a new situation, then test yourself.</div>
+</div></header>
+
+<nav><div class="wrap tabs">
+<button class="active" onclick="show('home',this)">🏠 Home</button>
+<button onclick="show('learn',this)">📚 Learn</button>
+<button onclick="show('scenarios',this)">🧠 Scenarios</button>
+<button onclick="show('quiz',this)">🎯 Quiz</button>
+<button onclick="show('checklist',this)">✅ Checklist</button>
+<button onclick="show('flash',this)">🃏 Flashcards</button>
+<button onclick="show('games',this)">🎮 Games</button>
+</div></nav>
+
+<main class="wrap">
+<section id="home" class="section active">
+<div class="hero">
+<div class="card"><span class="tag">HONORS BIOLOGY • CHAPTER 1</span><h2>Study smarter, not just longer.</h2>
+<p>Your test is application-based, so this hub is built around <b>recognizing concepts in new situations</b> rather than memorizing definitions.</p>
+<div class="controls"><button class="primary" onclick="show('flash',document.querySelectorAll('.tabs button')[5])">Study Flashcards →</button><button class="secondary" onclick="show('quiz',document.querySelectorAll('.tabs button')[3])">Challenge Me</button></div>
+<div class="statbox"><div class="stat"><b>50+</b><span class="mini">questions</span></div><div class="stat"><b>30+</b><span class="mini">flashcards</span></div><div class="stat"><b>5</b><span class="mini">game modes</span></div></div></div>
+<div class="card"><h3>🎯 Your Mission</h3><p>Master the concept → recognize it → apply it → explain <i>why</i>.</p><div class="callout"><b>Test trick:</b> Don't look for the exact wording you memorized. Look for the biological idea underneath the scenario.</div></div>
+</div><br>
+<div class="grid">
+<div class="card"><span class="tag">01</span><h3>Characteristics of Life</h3><p>Order, reproduction, growth and development, energy processing, regulation, response, and evolutionary adaptation.</p></div>
+<div class="card"><span class="tag">02</span><h3>Organization</h3><p>Biosphere → ecosystem → community → population → organism → organ system → organ → tissue → cell → organelle → molecule.</p></div>
+<div class="card"><span class="tag">03</span><h3>Scientific Inquiry</h3><p>Observation → question → hypothesis → prediction → experiment, with evidence guiding the process.</p></div>
+<div class="card"><span class="tag">04</span><h3>Natural Selection</h3><p>Heritable variation + overproduction + unequal reproductive success can change trait frequencies in populations.</p></div>
+</div>
+</section>
+
+<section id="learn" class="section">
+<h2>📚 Core Concepts</h2>
+<div class="grid">
+<div class="card"><h3>1. Characteristics of Life</h3><ul><li>Order</li><li>Reproduction</li><li>Growth and development</li><li>Energy processing</li><li>Regulation</li><li>Response to the environment</li><li>Evolutionary adaptation</li></ul><p><b>Remember:</b> the cell is the basic structural and functional unit of life.</p></div>
+<div class="card"><h3>2. Levels of Organization</h3><div class="flow">Biosphere → Ecosystem → Community → Population → Organism → Organ System → Organ → Tissue → Cell → Organelle → Molecule</div><p><b>Population:</b> same species in an area.<br><b>Community:</b> different populations in an area.<br><b>Ecosystem:</b> community + nonliving environmental factors.</p></div>
+<div class="card"><h3>3. Emergent Properties</h3><p>A new property results from the arrangement and interactions of components.</p><div class="callout"><b>Ask:</b> What can the complete system do that its individual components cannot do independently?</div></div>
+<div class="card"><h3>4. Scientific Inquiry</h3><table><tr><th>Term</th><th>Meaning</th></tr><tr><td>Observation</td><td>Something detected or measured.</td></tr><tr><td>Question</td><td>What the scientist wants to investigate.</td></tr><tr><td>Hypothesis</td><td>A proposed explanation for observations.</td></tr><tr><td>Prediction</td><td>Expected result if the hypothesis is correct.</td></tr><tr><td>Experiment</td><td>A scientific test of a hypothesis.</td></tr></table></div>
+<div class="card"><h3>5. Experimental Variables</h3><table><tr><th>Component</th><th>Ask yourself</th></tr><tr><td>Independent variable</td><td>What did the scientist change?</td></tr><tr><td>Dependent variable</td><td>What did the scientist measure?</td></tr><tr><td>Controlled variables</td><td>What was kept similar?</td></tr><tr><td>Control group</td><td>What provides the comparison?</td></tr><tr><td>Experimental group</td><td>Who receives the treatment?</td></tr></table></div>
+<div class="card"><h3>6. Qualitative vs. Quantitative</h3><p><b>Qualitative:</b> descriptive, nonnumerical — “the leaves are dark green.”</p><p><b>Quantitative:</b> numerical measurement — “the plant grew 4.8 cm in seven days.”</p></div>
+<div class="card"><h3>7. Interpreting Results</h3><ul><li>Don't change results because they fail to support a hypothesis.</li><li>Reconsider or revise the hypothesis/design and collect more evidence.</li><li>One experiment does not permanently prove a hypothesis.</li><li>Repeated testing and multiple independent lines of evidence can increase confidence.</li></ul></div>
+<div class="card"><h3>8. Observational Studies</h3><p>Some questions cannot be tested with a controlled experiment. Scientists can use observations such as DNA sequences, fossils, populations, and human health records.</p></div>
+<div class="card"><h3>9. Science Is Not a Straight Line</h3><p>Scientific inquiry is repetitive, nonlinear, and collaborative. Scientists can move between exploration, hypotheses, testing, evidence analysis, feedback, and new questions.</p></div>
+<div class="card"><h3>10. Evolution & Natural Selection</h3><p>Natural selection depends on <b>heritable variation</b>, <b>overproduction of offspring</b>, and <b>unequal reproductive success</b>.</p><div class="callout">Individuals do not evolve because they need to change. <b>Populations evolve over generations.</b></div></div>
+<div class="card"><h3>11. Flow of Information</h3><p>DNA stores hereditary information and provides instructions involved in protein production. Information can also move through organisms as signals and pathways.</p><ul><li>DNA from parents to offspring</li><li>Genes influencing protein production</li><li>Hormonal signaling</li><li>Cellular communication</li><li>Environmental signals affecting cell activity</li></ul></div>
+<div class="card"><h3>12. Structure & Function</h3><p>Structure is related to function at all levels of biological organization.</p><div class="callout"><b>Test move:</b> If you see an unfamiliar structure, ask how its shape or organization helps it perform its function.</div></div>
+<div class="card"><h3>13. Energy & Matter</h3><div class="flow">ENERGY FLOWS<br>Sunlight → Producers → Consumers → Heat</div><br><div class="flow">MATTER CYCLES<br>Environment → Producers → Consumers → Decomposers → Environment</div><p><b>Don't mix them up:</b> energy generally moves one direction; matter is recycled.</p></div>
+<div class="card"><h3>14. Interactions</h3><p>A change to one component can influence many others.</p><div class="callout">Drought → fewer plants → fewer insects → fewer frogs → fewer predators</div></div>
+<div class="card"><h3>15. Systems Biology</h3><p>Studies how interacting components produce complex biological behavior. Scientists may combine observations, environmental measurements, mathematical models, computer models, and population data.</p></div>
+</div>
+</section>
+
+<section id="scenarios" class="section">
+<h2>🧠 Application Scenarios</h2>
+<p class="mini">These are practice situations based on the concepts in your study guide.</p>
+<div id="scenarioCards" class="grid"></div>
+</section>
+
+<section id="quiz" class="section">
+<h2>🎯 Application Quiz</h2>
+<div class="card">
+<div class="score" id="score">Score: 0 / 0</div>
+<div class="progress"><div class="bar" id="bar"></div></div>
+<br>
+<div id="quizArea"></div>
+<div class="controls"><button class="primary" id="nextBtn" onclick="nextQ()" style="display:none">Next Question →</button><button class="secondary" onclick="restart()">Restart Quiz</button></div>
+</div>
+</section>
+
+
+<section id="flash" class="section">
+<h2>🃏 Satisfying Flashcards</h2>
+<p class="mini">Click a card to flip it. Try to answer out loud before revealing the back.</p>
+<div class="modebar" id="flashModes"></div>
+<div class="flash-wrap"><div class="flashcard" id="flashCard" onclick="flipFlash()"><div class="flash-inner">
+<div class="flash-face flash-front"><div class="flash-label">Concept</div><div class="flash-term" id="flashTerm"></div><div class="flash-hint">Click to reveal</div></div>
+<div class="flash-face flash-back"><div class="flash-label">Answer</div><div class="flash-answer" id="flashAnswer"></div><div class="flash-hint" style="color:#ffffffaa">Click to flip back</div></div>
+</div></div></div>
+<div class="controls" style="justify-content:center"><button class="secondary" onclick="prevFlash()">← Previous</button><span class="pillscore" id="flashCount">1 / 30</span><button class="primary" onclick="nextFlash()">Next →</button></div>
+</section>
+
+<section id="games" class="section">
+<h2>🎮 Biology Games</h2>
+<p class="mini">Short game modes designed around the concepts in your Chapter 1 guide.</p>
+<div class="gamegrid">
+<div class="gamecard" onclick="startGame('speed')"><div class="gameicon">⚡</div><h3>Speed Round</h3><p>10 rapid-fire questions. How many can you get right?</p></div>
+<div class="gamecard" onclick="startGame('scenario')"><div class="gameicon">🧠</div><h3>Scenario Detective</h3><p>Identify the hidden biological concept inside a situation.</p></div>
+<div class="gamecard" onclick="startGame('variables')"><div class="gameicon">🧪</div><h3>Lab Detective</h3><p>Find the independent variable, dependent variable, and groups.</p></div>
+<div class="gamecard" onclick="startGame('evolution')"><div class="gameicon">🧬</div><h3>Evolution Challenge</h3><p>Apply natural selection to unfamiliar populations.</p></div>
+</div>
+<br><div id="gameArea"></div>
+</section>
+<section id="checklist" class="section">
+<h2>✅ Final Test Checklist</h2>
+<div class="card"><ul id="checkItems"></ul></div>
+</section>
+</main>
+<footer>Honors Biology • Chapter 1: Biology: Exploring Life</footer>
+
+
+<script>
+const scenarios = [
+["Characteristics of Life","A plant bends toward a sunny window. Which characteristic is most directly shown?","Response to the environment"],
+["Characteristics of Life","A person sweats when body temperature rises. Which characteristic is shown?","Regulation"],
+["Organization","A forest contains deer, trees, birds, fungi, and insects. What level is this group?","Community"],
+["Organization","A forest's organisms plus soil, water, temperature, and sunlight are considered what?","Ecosystem"],
+["Variables","A researcher changes fertilizer amount and measures plant height. What is the dependent variable?","Plant height"],
+["Variables","In the same experiment, what is the independent variable?","Fertilizer treatment"],
+["Data","A scientist records “the leaves are dark green.” What kind of data is this?","Qualitative"],
+["Natural Selection","A drought leaves mostly plants with inherited drought-tolerant traits alive to reproduce. What process can make that trait more common over generations?","Natural selection"],
+["Natural Selection","A population's individuals change their traits during their lifetimes because they need to survive. Is this the model described in the guide?","No. Populations evolve over generations."],
+["Energy & Matter","Which statement matches the guide?","Energy generally flows one way; matter is recycled."],
+["Interactions","A drought reduces plants, then insects, then frogs. What concept does this demonstrate?","Interactions within and between systems"],
+["Structure & Function","You encounter an unfamiliar biological structure. What should you examine to predict its function?","Its shape or organization"]
+];
+
+const quiz = [
+["A researcher tests whether a new fertilizer changes plant growth. Group A gets fertilizer and Group B does not. Both groups receive the same water, soil, light, and temperature. Which statement is correct?",["Water is the independent variable.","Plant growth is the dependent variable.","The soil is the dependent variable.","Group A is the control group."],1,"The researcher changes fertilizer and measures plant growth."],
+["A scientist predicts: “If my hypothesis is correct, then plants receiving more light will produce more growth over seven days.” What makes this a prediction rather than a hypothesis?",["It proposes an explanation.","It states an expected result if the explanation is correct.","It reports an observation already made.","It identifies a control group."],1,"A prediction describes an expected result if the hypothesis is correct."],
+["A student finds that a treatment group has greater growth than a control group, but the groups also received different amounts of water. What is the biggest problem?",["There is no dependent variable.","A controlled variable was changed, making the treatment's effect harder to isolate.","The data are automatically qualitative.","The hypothesis is permanently proven."],1,"Changing water between groups makes the treatment's effect harder to isolate."],
+["A population contains bacteria with inherited differences in resistance to a chemical. The chemical kills susceptible bacteria, while resistant bacteria survive and reproduce. After many generations, resistance becomes more common. Which explanation best fits?",["Individual bacteria evolved because they needed resistance.","Natural selection changed the population across generations.","The chemical caused every bacterium to become resistant during its lifetime.","The population did not change."],1,"Inherited variation plus unequal reproductive success can change a population over generations."],
+["A biologist compares DNA sequences from several populations but does not manipulate the organisms. Which type of evidence is this?",["A controlled experiment","An observational study","A control group","A dependent variable"],1,"DNA comparisons are an example of observational data in the guide."],
+["A drought reduces plant abundance. Several months later, insects decline, followed by frogs. Which idea is most directly illustrated?",["A system's components can influence one another.","Energy is matter.","Only individuals evolve.","Qualitative data are numerical."],0,"The guide uses a drought → plants → insects → frogs chain as an example of interactions."],
+["A student says, “The hypothesis was supported once, so it is permanently proven.” Which response matches the guide?",["Correct; one successful experiment permanently proves a hypothesis.","Incorrect; repeated testing and multiple independent lines of evidence can increase confidence, but one experiment does not permanently prove it.","Correct only if the sample was large.","Incorrect because hypotheses can never be tested."],1,"One successful experiment does not permanently prove a hypothesis."],
+["Which situation is the clearest example of an emergent property?",["A single component has a property by itself.","A biological system displays a new behavior because its components are arranged and interact in a particular way.","A researcher measures temperature.","A population contains one species."],1,"Emergent properties result from arrangement and interactions among components."],
+["Which ordering moves from larger scale to smaller scale?",["Cell → tissue → organ → organism","Biosphere → ecosystem → community → population → organism","Molecule → organelle → cell → tissue","Population → community → ecosystem → biosphere"],1,"That sequence follows the hierarchy in the study guide."],
+["A student describes leaves as “dark green and waxy” and records their average length as 8.2 cm. Which classification is correct?",["Both observations are qualitative.","Both are quantitative.","The first is qualitative; the second is quantitative.","The first is quantitative; the second is qualitative."],2,"Color and texture are qualitative; measured length is quantitative."],
+["Why is heritable variation important to natural selection?",["It allows advantageous inherited traits to be passed to offspring and potentially become more common.","It makes all members of a population identical.","It stops reproduction.","It guarantees every individual survives."],0,"Inherited differences can be passed across generations."],
+["A scientist studies how hormone signals cause changes in cells. Which unifying idea is most directly involved?",["Flow of information","Matter cycling only","Population hierarchy","Qualitative data"],0,"Hormonal signaling is listed under flow of biological information."],
+["An unfamiliar biological structure has a very large surface area. Based on structure and function, what should you do?",["Ignore the shape because structure is unrelated to function.","Consider how the structure's organization may help it perform its function.","Assume it is a population.","Call the observation quantitative."],1,"The guide connects shape or organization with function."],
+["Which correctly compares energy and matter in an ecosystem?",["Energy is recycled exactly like matter.","Matter generally moves one direction and becomes heat.","Energy generally flows one direction; matter is recycled.","Neither energy nor matter changes."],2,"The guide distinguishes energy flow from matter cycling."],
+["A scientist's results fail to support the original hypothesis. What is the appropriate next move?",["Delete the results.","Change measurements until they fit.","Reconsider the hypothesis or experimental design and gather more evidence.","Declare the opposite hypothesis true immediately."],2,"Unsupported evidence should lead scientists to reconsider, revise, repeat, or gather more evidence."],
+["A researcher keeps water, soil, light, and temperature the same while changing fertilizer. Why?",["To create more independent variables.","To help isolate the effect of the fertilizer.","To eliminate the dependent variable.","To guarantee the hypothesis is correct."],1,"Controlled variables help isolate the factor being investigated."],
+["A single-celled organism can still be living because:",["Only organisms with organs are alive.","A cell is the basic structural and functional unit of life.","Cells cannot perform life processes.","Single-celled organisms are communities."],1,"The cell is the basic structural and functional unit of life."],
+["Which example is regulation rather than simply response?",["A plant grows toward light.","A person sweats as body temperature rises.","A bird flies away from a predator.","A seed is dispersed."],1,"Sweating helps regulate body temperature."],
+["A forest contains deer, oak trees, birds, fungi, soil, water, and sunlight. Which classification includes both living and nonliving factors?",["Population","Community","Ecosystem","Organism"],2,"An ecosystem includes a community plus nonliving environmental factors."],
+["Scientists move between observations, hypotheses, testing, evidence analysis, feedback, and new questions. This demonstrates that science is:",["Always a straight line","Nonlinear, repetitive, and collaborative","Only based on predictions","Finished after one experiment"],1,"The guide describes scientific inquiry as nonlinear, repetitive, and collaborative."],
+["A population has two inherited traits. Individuals with one trait leave more offspring in a changed environment. What changes over generations?",["The need of each individual","The population's frequency of the inherited trait","The fact that every individual becomes identical","Only the environment"],1,"Unequal reproductive success can cause inherited traits to become more common."],
+["Which statement is an observation rather than an explanation?",["The leaves measured 6 cm.","The fertilizer caused the leaves to grow.","Plants grow toward light because light changes their growth.","If light increases, growth will increase."],0,"An observation is something detected or measured."],
+["A scientist wants to know whether temperature affects enzyme activity and measures reaction rate at several temperatures. What is being measured?",["Independent variable","Dependent variable","Control group","Hypothesis"],1,"The measured outcome is the dependent variable."],
+["A complete biological system can perform a task that no component performs independently. This most directly supports:",["Emergent properties","Quantitative data","Control groups","Matter cycling"],0,"Emergent properties arise from interactions and organization."],
+["Which example best represents population-level evolution?",["One animal learns to hide.","One organism grows larger during its lifetime.","Over generations, an inherited trait becomes more common in a population.","An individual chooses a new habitat."],2,"The guide distinguishes individual changes from population evolution."],
+["A researcher records “Group A averaged 12.4 cm; Group B averaged 9.7 cm.” What type of data is this?",["Qualitative","Quantitative","A hypothesis","A conclusion"],1,"The values are numerical measurements."],
+["Which pairing is incorrect?",["Independent variable — deliberately changed factor","Dependent variable — measured outcome","Control group — comparison","Controlled variable — deliberately changed treatment"],3,"The controlled variables are kept similar; the deliberately changed factor is the independent variable."],
+["Why might a scientist repeat an investigation?",["To force the hypothesis to be correct","To collect more evidence and evaluate whether the pattern is reliable","To remove all observations","To avoid using controls"],1,"Repeated testing can increase confidence when evidence is consistent."],
+["A population's environment changes, but there is no inherited variation related to the new condition. What does the natural-selection framework suggest?",["Natural selection can directly create the needed inherited trait in individuals.","There is no heritable variation for selection to favor for that trait.","Every individual automatically adapts genetically.","The population must become identical."],1,"The guide says heritable variation is necessary for natural selection."],
+["Which chain correctly shows energy flow?",["Heat → consumers → sunlight → producers","Sunlight → producers → consumers → heat","Consumers → sunlight → decomposers → heat","Environment → decomposers → producers → sunlight"],1,"That is the energy-flow sequence in the guide."],
+["Which chain correctly shows matter cycling?",["Environment → producers → consumers → decomposers → environment","Sunlight → producers → consumers → heat","Heat → consumers → producers → sunlight","Producers → sunlight → heat → environment"],0,"The guide describes matter as cycling back to the environment."],
+["A scientist combines population data, environmental measurements, computer models, and biological observations to explain complex behavior. This is:",["Systems biology","A control group","Qualitative data","A single observation"],0,"Systems biology examines interacting components using multiple kinds of information."],
+["Which statement about a control group is most accurate?",["It always receives the treatment.","It provides a comparison for evaluating the treatment.","It is the measured outcome.","It is always larger than the experimental group."],1,"The control group provides the comparison."],
+["A plant's leaves close after an environmental change. Which characteristic is most directly represented?",["Response to the environment","Matter cycling","Population evolution","Community"],0,"A response is a reaction to an environmental change."],
+["A hypothesis is best described as:",["A proposed explanation for observations","The expected result if a hypothesis is correct","A factor kept constant","A numerical measurement"],0,"That is the study guide's definition."],
+["A prediction is best described as:",["A proposed explanation","The expected result if the hypothesis is correct","A comparison group","A level of organization"],1,"A prediction states the expected outcome that follows from a hypothesis."],
+["A researcher changes fertilizer, but also changes the amount of water between groups. Which conclusion should be treated cautiously?",["Fertilizer definitely caused the difference in growth.","The difference may be related to fertilizer, water, or both.","Water is the control group.","There is no dependent variable."],1,"Changing more than one factor makes it harder to determine which caused the result."],
+["Which statement best captures flow of information?",["DNA stores hereditary information, and cells also use signals such as hormones to regulate processes.","Only energy can carry information.","Matter cannot interact with cells.","Information never passes from parents to offspring."],0,"The guide includes DNA, genes, hormones, cellular communication, and environmental signals."],
+["Which level includes multiple organs working together?",["Tissue","Organ system","Population","Organelle"],1,"An organ system consists of multiple organs working together."],
+["Which level consists of similar cells working together?",["Tissue","Organ","Ecosystem","Biosphere"],0,"A tissue is made of similar cells working together."],
+["Which statement about an ecosystem is supported by the guide?",["It contains only organisms.","It is a community plus nonliving environmental factors.","It is smaller than a cell.","It contains only one species."],1,"That is the guide's definition of an ecosystem."],
+["A scientist receives feedback that raises a new question, then designs another test. What does this demonstrate?",["Science is nonlinear and collaborative.","Science must always follow one fixed sequence.","A hypothesis cannot be revised.","Experiments eliminate new questions."],0,"Scientists can move between stages and use feedback to ask new questions."],
+["Which situation shows energy processing?",["An organism obtains and uses energy to carry out life processes.","A population contains multiple species.","A scientist records leaf color.","A researcher labels a control group."],0,"Energy processing is one of the characteristics of life."],
+["Which situation best shows growth and development?",["An organism changes as it increases in size and develops over time.","A scientist compares DNA.","A drought changes an ecosystem.","A researcher changes fertilizer."],0,"Growth and development is a characteristic of life."],
+["Which statement is most consistent with natural selection?",["Every individual in a population changes in the same way.","Inherited differences can lead to unequal reproductive success.","Organisms acquire exactly the traits they need.","Evolution happens within one generation because individuals choose it."],1,"Natural selection depends on inherited variation and unequal reproductive success."],
+["A scientist sees that a trait is common in a population after an environmental shift. What additional evidence would be important before explaining it through natural selection?",["Evidence that the variation is heritable and related to reproductive success.","Proof that every individual wanted the trait.","Evidence that all individuals are identical.","A single color observation."],0,"The guide emphasizes heritable variation and unequal reproductive success."],
+["Which statement best summarizes systems biology?",["Study each component separately and never consider interactions.","Study how interacting components produce complex biological behavior.","Study only DNA sequences.","Study only nonliving factors."],1,"That is the central idea stated in the guide."]
+];
+
+const flashcards=[
+["Order","Living organisms demonstrate organized structure and processes."],["Reproduction","Living organisms produce offspring."],["Growth & development","Living organisms grow and develop."],["Energy processing","Living organisms process energy."],["Regulation","Organisms regulate internal conditions; sweating with rising body temperature is the guide's example."],["Response","Organisms respond to changes in their environment."],["Evolutionary adaptation","Inherited traits that fit an environment can become more common over generations."],["Population","Members of the same species living in an area."],["Community","All populations of different species living in an area."],["Ecosystem","A community plus nonliving environmental factors."],["Emergent property","A new property produced by the arrangement and interactions of components."],["Observation","Something detected or measured."],["Hypothesis","A proposed explanation for observations."],["Prediction","The expected result if a hypothesis is correct."],["Experiment","A scientific test of a hypothesis."],["Independent variable","The factor deliberately changed by the researcher."],["Dependent variable","The factor measured as the outcome."],["Controlled variables","Factors kept similar between groups."],["Control group","Provides a comparison."],["Experimental group","Receives the treatment being investigated."],["Qualitative data","Descriptive, nonnumerical data."],["Quantitative data","Numerical measurements."],["Natural selection","Heritable variation, overproduction, and unequal reproductive success can cause traits to become more common over generations."],["Heritable variation","Inherited differences that can be passed to offspring."],["Evolution","At the population level, inherited traits can change in frequency over generations."],["Flow of information","DNA stores hereditary information; signals and pathways also regulate biological processes."],["Structure & function","A structure's shape or organization is related to how it performs its function."],["Energy flow","Sunlight → producers → consumers → heat."],["Matter cycling","Environment → producers → consumers → decomposers → environment."],["Systems biology","Examines how interacting components produce complex biological behavior."]
+];
+
+let quizIndex=0, quizCorrect=0, quizAnswered=false;
+let flashIndex=0, flashSet=flashcards;
+let gamePool=[], gameIndex=0, gameScore=0, gameTitle="";
+
+function show(id,btn){
+ document.querySelectorAll(".section").forEach(s=>s.classList.remove("active"));
+ const target=document.getElementById(id); if(target) target.classList.add("active");
+ document.querySelectorAll(".tabs button").forEach(b=>b.classList.remove("active"));
+ if(btn) btn.classList.add("active");
+ window.scrollTo({top:0,behavior:"smooth"});
+}
+
+function buildScenarios(){
+ const el=document.getElementById("scenarioCards");
+ if(!el)return;
+ el.innerHTML=scenarios.map((s,i)=>`<div class="card"><span class="tag">Scenario ${i+1}</span><h3>${s[0]}</h3><p>${s[1]}</p><details><summary><b>Reveal answer</b></summary><p><b>${s[2]}</b></p></details></div>`).join("");
+}
+
+function renderQuiz(){
+ const area=document.getElementById("quizArea");
+ if(quizIndex>=quiz.length){
+  document.getElementById("score").textContent=`Final Score: ${quizCorrect} / ${quiz.length}`;
+  document.getElementById("bar").style.width="100%";
+  area.innerHTML=`<h2>🎉 Quiz Complete!</h2><p class="score">${quizCorrect} / ${quiz.length} — ${Math.round(quizCorrect/quiz.length*100)}%</p><p>Replay to get a fresh randomized order.</p>`;
+  document.getElementById("nextBtn").style.display="none"; return;
+ }
+ quizAnswered=false;
+ const x=quiz[quizIndex];
+ document.getElementById("score").textContent=`Score: ${quizCorrect} / ${quizIndex}`;
+ document.getElementById("bar").style.width=(quizIndex/quiz.length*100)+"%";
+ area.innerHTML=`<div class="question">${quizIndex+1}. ${x[0]}</div><div class="answers">${x[1].map((a,i)=>`<button onclick="answerQuiz(${i})">${String.fromCharCode(65+i)}. ${a}</button>`).join("")}</div><div id="feedback" class="feedback"></div>`;
+ document.getElementById("nextBtn").style.display="none";
+}
+
+function answerQuiz(i){
+ if(quizAnswered)return; quizAnswered=true;
+ const x=quiz[quizIndex], f=document.getElementById("feedback");
+ if(i===x[2]){quizCorrect++;f.className="feedback correct";f.innerHTML="<b>Correct!</b> "+x[3]}
+ else{f.className="feedback wrong";f.innerHTML="<b>Not quite.</b> "+x[3]+"<br><br><b>Correct answer:</b> "+x[1][x[2]]}
+ f.style.display="block";
+ document.getElementById("score").textContent=`Score: ${quizCorrect} / ${quizIndex+1}`;
+ document.getElementById("bar").style.width=((quizIndex+1)/quiz.length*100)+"%";
+ document.getElementById("nextBtn").style.display="inline-block";
+}
+
+function nextQ(){if(!quizAnswered)return;if(quizIndex<quiz.length-1){quizIndex++;renderQuiz()}else renderQuiz()}
+function restart(){quizIndex=0;quizCorrect=0;quizAnswered=false;quiz.sort(()=>Math.random()-.5);renderQuiz()}
+
+function buildFlash(){
+ const el=document.getElementById("flashModes"); if(!el)return;
+ el.innerHTML=`<button class="sel" onclick="setFlash('all',this)">All</button><button onclick="setFlash('science',this)">Science Skills</button><button onclick="setFlash('life',this)">Life & Evolution</button><button onclick="setFlash('systems',this)">Systems</button>`;
+ renderFlash();
+}
+function setFlash(mode,btn){
+ document.querySelectorAll("#flashModes button").forEach(b=>b.classList.remove("sel"));btn.classList.add("sel");
+ if(mode==="all")flashSet=flashcards;
+ if(mode==="science")flashSet=flashcards.slice(11,22);
+ if(mode==="life")flashSet=flashcards.slice(0,11).concat(flashcards.slice(22,25));
+ if(mode==="systems")flashSet=flashcards.slice(25);
+ flashIndex=0;renderFlash();
+}
+function renderFlash(){
+ const card=document.getElementById("flashCard"); if(!card)return;
+ card.classList.remove("flipped");
+ document.getElementById("flashTerm").textContent=flashSet[flashIndex][0];
+ document.getElementById("flashAnswer").textContent=flashSet[flashIndex][1];
+ document.getElementById("flashCount").textContent=`${flashIndex+1} / ${flashSet.length}`;
+}
+function flipFlash(){document.getElementById("flashCard").classList.toggle("flipped")}
+function nextFlash(){flashIndex=(flashIndex+1)%flashSet.length;renderFlash()}
+function prevFlash(){flashIndex=(flashIndex-1+flashSet.length)%flashSet.length;renderFlash()}
+
+function startGame(mode){
+ const names={speed:"⚡ Speed Round",scenario:"🧠 Scenario Detective",variables:"🧪 Lab Detective",evolution:"🧬 Evolution Challenge"};
+ gameTitle=names[mode]||"🎮 Biology Game";
+ if(mode==="variables")gamePool=quiz.filter(x=>/variable|control group|water|fertilizer|treatment/i.test(x[0]));
+ else if(mode==="evolution")gamePool=quiz.filter(x=>/natural selection|population|heritable|evolv|trait|generations/i.test(x[0]));
+ else if(mode==="scenario")gamePool=quiz.filter(x=>x[0].length>105);
+ else gamePool=[...quiz];
+ gamePool=[...gamePool].sort(()=>Math.random()-.5).slice(0,10);
+ gameIndex=0;gameScore=0;renderGame();
+}
+function renderGame(){
+ const area=document.getElementById("gameArea"); if(!area)return;
+ if(gameIndex>=gamePool.length){
+  area.innerHTML=`<div class="card"><h2>${gameTitle} Complete! 🎉</h2><div class="score">${gameScore} / ${gamePool.length}</div><p>Try another mode or replay for a different set.</p></div>`;return;
+ }
+ const x=gamePool[gameIndex];
+ area.innerHTML=`<div class="card"><span class="tag">${gameTitle}</span><p class="mini">Question ${gameIndex+1} / ${gamePool.length}</p><div class="meter"><span style="width:${gameIndex/gamePool.length*100}%"></span></div><br><div class="question">${x[0]}</div><div class="answers">${x[1].map((a,i)=>`<button onclick="gameAnswer(${i})">${String.fromCharCode(65+i)}. ${a}</button>`).join("")}</div><div id="gameFeedback" class="feedback"></div></div>`;
+}
+function gameAnswer(i){
+ const x=gamePool[gameIndex],f=document.getElementById("gameFeedback");
+ if(i===x[2]){gameScore++;f.className="feedback correct";f.innerHTML="<b>Correct!</b> "+x[3]}
+ else{f.className="feedback wrong";f.innerHTML="<b>Not quite.</b> "+x[3]+"<br><br><b>Correct:</b> "+x[1][x[2]]}
+ f.style.display="block";
+ setTimeout(()=>{gameIndex++;renderGame()},700);
+}
+
+const checklist=["Identify characteristics of life from examples.","Determine levels of biological organization.","Explain emergent properties.","Distinguish population, community, and ecosystem.","Distinguish observation, hypothesis, prediction, and conclusion.","Identify independent and dependent variables.","Identify control and experimental groups.","Explain why controlled variables are necessary.","Distinguish qualitative and quantitative data.","Interpret results that support or fail to support a hypothesis.","Explain why hypotheses are not permanently proven.","Recognize observational studies.","Explain why science is nonlinear and collaborative.","Apply natural selection to unfamiliar examples.","Explain why heritable variation is necessary for natural selection.","Distinguish population evolution from changes in individuals.","Apply the five unifying themes to new scenarios.","Explain how DNA relates to biological information.","Connect biological structure with function.","Distinguish energy flow from matter cycling.","Predict how a change in one part of a biological system may affect other components."];
+
+function buildChecklist(){
+ const el=document.getElementById("checkItems");if(!el)return;
+ el.innerHTML=checklist.map((x,i)=>`<li><label><input type="checkbox" onchange="saveCheck(${i},this.checked)"> ${x}</label></li>`).join("");
+ el.querySelectorAll("input").forEach((x,i)=>x.checked=localStorage.getItem("bioCheck"+i)==="true");
+}
+function saveCheck(i,v){localStorage.setItem("bioCheck"+i,v)}
+
+window.addEventListener("DOMContentLoaded",()=>{
+ buildScenarios();buildFlash();buildChecklist();renderQuiz();
+});
+</script>
+</body>
+</html>
